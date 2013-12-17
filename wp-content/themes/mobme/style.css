@@ -3333,3 +3333,16 @@ footer.entry-meta {
 		color: #333;
 	}
 }
+
+/**
+ * Custom additions
+ * ----------------------------------------------------------------------------
+ */
+
+#navbar {
+	display: none;
+}
+
+#wpadminbar {
+	display: none;
+}
