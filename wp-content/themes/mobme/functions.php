@@ -24,18 +24,22 @@
  * @since Twenty Thirteen 1.0
  */
 
+/* Disable admin bar */
 function mobme_function_admin_bar(){ 
   return false; 
 }
+add_filter( 'show_admin_bar' , 'mobme_function_admin_bar');
 
 /* Allow src for script tags */
-global $allowedposttags;
-$allowedposttags['script'] = array(
- 'type' => array(),
- 'src' => array()
-);
+function allow_script_tags( $allowedposttags ){
+  $allowedposttags['script'] = array(
+      'src' => true
+    );
+  return $allowedposttags;
+}
+add_filter('wp_kses_allowed_html','allow_script_tags', 1);
 
-add_filter( 'show_admin_bar' , 'mobme_function_admin_bar');
+
 
 /**
  * Sets up the content width value based on the theme's design.
