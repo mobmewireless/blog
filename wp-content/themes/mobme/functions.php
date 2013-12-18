@@ -24,6 +24,12 @@
  * @since Twenty Thirteen 1.0
  */
 
+function mobme_function_admin_bar(){ 
+  return false; 
+}
+
+add_filter( 'show_admin_bar' , 'mobme_function_admin_bar');
+
 /**
  * Sets up the content width value based on the theme's design.
  * @see twentythirteen_content_width() for template-specific adjustments.
