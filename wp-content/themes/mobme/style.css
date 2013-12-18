@@ -976,7 +976,7 @@ ul.nav-menu li:hover > ul,
  */
  
  
- .latest-post {
+ .latest-posts {
 	width:100%;
 	margin:0 0 30px 0;
 	padding:30px 0 10px 0;
@@ -984,19 +984,19 @@ ul.nav-menu li:hover > ul,
 	border-bottom:1px solid #f3f3f3;
 }
 
-.latest-post h2 {
+.latest-posts h2 {
 	font-size:28px;
 	font-weight:normal;
 	margin:0 0 25px 0;
 	line-height:32px;
 }
 
-.latest-post h2 a {
+.latest-posts h2 a {
 	color:#666;
 	text-decoration:none;
 }
 
-.latest-post h2 a:hover, .quick-posts-wrap h2 a:hover {
+.latest-posts h2 a:hover, .quick-posts-wrap h2 a:hover {
 	color:#09C;
 }
 

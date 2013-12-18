@@ -19,9 +19,9 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<div id="content" class="site-content" role="main">
 		<div class="entry-content">
-			<div class="latest-post">
+			<div class="latest-posts">
 				<?php
-				$args = array( 'numberposts' => 1 );
+				$args = array( 'numberposts' => 10 );
 				$lastposts = get_posts( $args );
 				foreach($lastposts as $post) : setup_postdata($post); ?>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -31,36 +31,7 @@ get_header(); ?>
 			<p class="post-credits"> <small> <span class="posted">Posted by <?php the_author_posts_link(); ?></span> <span class="category"> Category <?php the_category(', ') ?></span> 
 				<span class="post-time"><a href="<?php the_permalink(); ?>#respond">Comment</a></span></small></p>
                     
-			</div><!-- latest-post-->
-                 
-			<div class="quick-posts-wrap">
-                        
-				<div class="quick-posts-left">
-					<?php
-					$catquery = new WP_Query( 'cat=5&posts_per_page=1' );
-					while($catquery->have_posts()) : $catquery->the_post();
-					?>
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p><?php echo wp_trim_words( get_the_content(), 30 ); ?></p>
-					<p class="more"> <a href="<?php the_permalink(); ?>">Read More &rarr;</a></p>
-				<?php endwhile; ?>
-                                         
-			</div>
-                         
-			<div class="quick-posts-right">
-				<?php
-				$catquery = new WP_Query( 'cat=1&posts_per_page=1' );
-				while($catquery->have_posts()) : $catquery->the_post();
-				?>
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p><?php echo wp_trim_words( get_the_content(), 30 ); ?></p>
-				<p class="more"><a href="<?php the_permalink(); ?>">Read More &rarr;</a></p>
-			<?php endwhile; ?>
-                                         
-		</div><!-- quick-posts-right -->
-                                         
-		<div class="clear"></div>
-	</div><!-- quick-posts-wrap -->                 
+			</div><!-- latest-posts-->               
 </div><!-- entry-content-->
 </div><!-- #content -->
 </div><!-- #primary -->
