@@ -164,19 +164,11 @@ function wpns_get_subscribers() {
  * @param int $post_id WordPress Post Id
  */
 function wp_notify_subscribers($post_id) {
-  
-  // FIXME: It is possible, that the filter also excecutes when already was public
-  
-  $subscribers = wpns_get_subscribers();
-  
-  $post = get_post($post_id);
-  
-  foreach($subscribers as $subscriber) {
-  
-    wpns_send_mail($post, $subscriber);
-  
-  }
-  
+    $subscribers = wpns_get_subscribers();
+    $post = get_post($post_id);
+    foreach($subscribers as $subscriber) {
+      wpns_send_mail($post, $subscriber);
+    }
 }
 
 function wpns_install() {
@@ -215,7 +207,9 @@ register_deactivation_hook($file_name, 'wpns_uninstall');
 
 require_once('settings.php');
 
-add_filter('publish_post', 'wp_notify_subscribers');
+add_filter('new_to_publish', 'wp_notify_subscribers');
+add_filter('draft_to_publish', 'wp_notify_subscribers');
+add_filter('future_to_publish', 'wp_notify_subscribers');
 
 
 ?>
