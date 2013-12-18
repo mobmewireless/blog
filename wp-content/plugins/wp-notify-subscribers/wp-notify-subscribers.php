@@ -163,9 +163,8 @@ function wpns_get_subscribers() {
  * 
  * @param int $post_id WordPress Post Id
  */
-function wp_notify_subscribers($post_id) {
+function wp_notify_subscribers($post) {
     $subscribers = wpns_get_subscribers();
-    $post = get_post($post_id);
     foreach($subscribers as $subscriber) {
       wpns_send_mail($post, $subscriber);
     }
