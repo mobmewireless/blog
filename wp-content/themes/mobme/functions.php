@@ -28,6 +28,13 @@ function mobme_function_admin_bar(){
   return false; 
 }
 
+/* Allow src for script tags */
+global $allowedposttags;
+$allowedposttags['script'] = array(
+ 'type' => array(),
+ 'src' => array()
+);
+
 add_filter( 'show_admin_bar' , 'mobme_function_admin_bar');
 
 /**
