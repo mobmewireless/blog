@@ -206,9 +206,9 @@ register_deactivation_hook($file_name, 'wpns_uninstall');
 
 require_once('settings.php');
 
-add_filter('new_to_publish', 'wp_notify_subscribers');
-add_filter('draft_to_publish', 'wp_notify_subscribers');
-add_filter('future_to_publish', 'wp_notify_subscribers');
+add_action('new_to_publish', 'wp_notify_subscribers');
+add_action('draft_to_publish', 'wp_notify_subscribers');
+add_action('future_to_publish', 'wp_notify_subscribers');
 
 
 ?>
