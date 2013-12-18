@@ -3346,3 +3346,7 @@ footer.entry-meta {
 #wpadminbar {
 	display: none;
 }
+
+html {
+	margin-top: 0px !important;
+}
