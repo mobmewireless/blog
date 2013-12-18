@@ -26,11 +26,10 @@ get_header(); ?>
 				foreach($lastposts as $post) : setup_postdata($post); ?>
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentythirteen' ) ); ?>
-			<?php endforeach; ?>
-                
-			<p class="post-credits"> <small> <span class="posted">Posted by <?php the_author_posts_link(); ?></span> <span class="category"> Category <?php the_category(', ') ?></span> 
-				<span class="post-time"><a href="<?php the_permalink(); ?>#respond">Comment</a></span></small></p>
-                    
+				<p class="post-credits"> <small> <span class="posted">Posted by <?php the_author_posts_link(); ?></span> <span class="category"> Category <?php the_category(', ') ?></span> 
+					<span class="post-time"><a href="<?php the_permalink(); ?>#respond">Comment</a></span></small></p>
+				<hr />
+			<?php endforeach; ?>                    
 			</div><!-- latest-posts-->               
 </div><!-- entry-content-->
 </div><!-- #content -->
