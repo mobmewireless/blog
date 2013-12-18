@@ -29,7 +29,7 @@ get_header(); ?>
 			<?php endforeach; ?>
                 
 			<p class="post-credits"> <small> <span class="posted">Posted by <?php the_author_posts_link(); ?></span> <span class="category"> Category <?php the_category(', ') ?></span> 
-				<span class="post-time"> <?php the_time('m/j/y g:i A') ?> </span></small></p>
+				<span class="post-time"><a href="<?php the_permalink(); ?>#respond">Comment</a></span></small></p>
                     
 			</div><!-- latest-post-->
                  
