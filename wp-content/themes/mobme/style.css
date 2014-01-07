@@ -1682,10 +1682,6 @@ footer.entry-meta {
 }
 
 /* Video */
-.format-video {
-	background-color: #db572f;
-}
-
 .format-video .entry-content a,
 .format-video .entry-meta a,
 .format-video .entry-content a:hover,
