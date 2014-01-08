@@ -1681,17 +1681,6 @@ footer.entry-meta {
 	content: "\f105";
 }
 
-/* Video */
-.format-video .entry-title {
-	font-size: 50px;
-	font-weight: 400;
-}
-
-.format-video .entry-meta {
-	color: #220e10;
-}
-
-
 /**
  * 5.6 Attachments
  * ----------------------------------------------------------------------------
