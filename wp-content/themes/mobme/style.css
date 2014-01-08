@@ -1682,13 +1682,6 @@ footer.entry-meta {
 }
 
 /* Video */
-.format-video .entry-content a,
-.format-video .entry-meta a,
-.format-video .entry-content a:hover,
-.format-video .entry-meta a:hover {
-	color: #fbfaf3;
-}
-
 .format-video .entry-title {
 	font-size: 50px;
 	font-weight: 400;
