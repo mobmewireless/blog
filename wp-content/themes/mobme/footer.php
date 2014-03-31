@@ -13,14 +13,14 @@
 
 		</div><!-- #main -->
 		
+		<?php get_sidebar('main'); ?>
 	</div><!-- #page -->
     
     <footer id="colophon" class="site-footer" role="contentinfo">
-
-			<div class="site-info">
-				 Copyright © 2006-2013 MobME Wireless Solutions Ltd. All rights reserved. 
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
+		<div class="site-info">
+			 Copyright © 2006-2013 MobME Wireless Solutions Ltd. All rights reserved. 
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
 
 	<?php wp_footer(); ?>
 </body>
